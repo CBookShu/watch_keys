@@ -1,0 +1,7 @@
+syntax = "proto2";
+package py_test;
+
+message UserData {
+    required int32 userid = 1;
+    optional int32 age = 2;
+}
