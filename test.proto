@@ -4,4 +4,24 @@ package py_test;
 message UserData {
     required int32 userid = 1;
     optional int32 age = 2;
+    optional int32 task_count = 3;
+}
+
+message UserTaskAddReq {
+    required int32 userid = 1;
+    required int32 add = 2;
+}
+
+message UserTaskAddRsp {
+    required int32 userid = 1;
+    required int32 progress = 2;
+}
+
+message UserTaskTakeReq {
+    required int32 userid = 1;
+}
+
+message UserTaskTakeRsp {
+    required int32 status = 1;
+    required int32 userid = 2;
 }

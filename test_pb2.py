@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='test.proto',
   package='py_test',
   syntax='proto2',
-  serialized_pb=_b('\n\ntest.proto\x12\x07py_test\"\'\n\x08UserData\x12\x0e\n\x06userid\x18\x01 \x02(\x05\x12\x0b\n\x03\x61ge\x18\x02 \x01(\x05')
+  serialized_pb=_b('\n\ntest.proto\x12\x07py_test\";\n\x08UserData\x12\x0e\n\x06userid\x18\x01 \x02(\x05\x12\x0b\n\x03\x61ge\x18\x02 \x01(\x05\x12\x12\n\ntask_count\x18\x03 \x01(\x05\"-\n\x0eUserTaskAddReq\x12\x0e\n\x06userid\x18\x01 \x02(\x05\x12\x0b\n\x03\x61\x64\x64\x18\x02 \x02(\x05\"2\n\x0eUserTaskAddRsp\x12\x0e\n\x06userid\x18\x01 \x02(\x05\x12\x10\n\x08progress\x18\x02 \x02(\x05\"!\n\x0fUserTaskTakeReq\x12\x0e\n\x06userid\x18\x01 \x02(\x05\"1\n\x0fUserTaskTakeRsp\x12\x0e\n\x06status\x18\x01 \x02(\x05\x12\x0e\n\x06userid\x18\x02 \x02(\x05')
 )
 
 
@@ -46,6 +46,13 @@ _USERDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='task_count', full_name='py_test.UserData.task_count', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -59,10 +66,159 @@ _USERDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=23,
-  serialized_end=62,
+  serialized_end=82,
+)
+
+
+_USERTASKADDREQ = _descriptor.Descriptor(
+  name='UserTaskAddReq',
+  full_name='py_test.UserTaskAddReq',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='userid', full_name='py_test.UserTaskAddReq.userid', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='add', full_name='py_test.UserTaskAddReq.add', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=84,
+  serialized_end=129,
+)
+
+
+_USERTASKADDRSP = _descriptor.Descriptor(
+  name='UserTaskAddRsp',
+  full_name='py_test.UserTaskAddRsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='userid', full_name='py_test.UserTaskAddRsp.userid', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='progress', full_name='py_test.UserTaskAddRsp.progress', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=131,
+  serialized_end=181,
+)
+
+
+_USERTASKTAKEREQ = _descriptor.Descriptor(
+  name='UserTaskTakeReq',
+  full_name='py_test.UserTaskTakeReq',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='userid', full_name='py_test.UserTaskTakeReq.userid', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=183,
+  serialized_end=216,
+)
+
+
+_USERTASKTAKERSP = _descriptor.Descriptor(
+  name='UserTaskTakeRsp',
+  full_name='py_test.UserTaskTakeRsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='status', full_name='py_test.UserTaskTakeRsp.status', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='userid', full_name='py_test.UserTaskTakeRsp.userid', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=218,
+  serialized_end=267,
 )
 
 DESCRIPTOR.message_types_by_name['UserData'] = _USERDATA
+DESCRIPTOR.message_types_by_name['UserTaskAddReq'] = _USERTASKADDREQ
+DESCRIPTOR.message_types_by_name['UserTaskAddRsp'] = _USERTASKADDRSP
+DESCRIPTOR.message_types_by_name['UserTaskTakeReq'] = _USERTASKTAKEREQ
+DESCRIPTOR.message_types_by_name['UserTaskTakeRsp'] = _USERTASKTAKERSP
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UserData = _reflection.GeneratedProtocolMessageType('UserData', (_message.Message,), dict(
@@ -71,6 +227,34 @@ UserData = _reflection.GeneratedProtocolMessageType('UserData', (_message.Messag
   # @@protoc_insertion_point(class_scope:py_test.UserData)
   ))
 _sym_db.RegisterMessage(UserData)
+
+UserTaskAddReq = _reflection.GeneratedProtocolMessageType('UserTaskAddReq', (_message.Message,), dict(
+  DESCRIPTOR = _USERTASKADDREQ,
+  __module__ = 'test_pb2'
+  # @@protoc_insertion_point(class_scope:py_test.UserTaskAddReq)
+  ))
+_sym_db.RegisterMessage(UserTaskAddReq)
+
+UserTaskAddRsp = _reflection.GeneratedProtocolMessageType('UserTaskAddRsp', (_message.Message,), dict(
+  DESCRIPTOR = _USERTASKADDRSP,
+  __module__ = 'test_pb2'
+  # @@protoc_insertion_point(class_scope:py_test.UserTaskAddRsp)
+  ))
+_sym_db.RegisterMessage(UserTaskAddRsp)
+
+UserTaskTakeReq = _reflection.GeneratedProtocolMessageType('UserTaskTakeReq', (_message.Message,), dict(
+  DESCRIPTOR = _USERTASKTAKEREQ,
+  __module__ = 'test_pb2'
+  # @@protoc_insertion_point(class_scope:py_test.UserTaskTakeReq)
+  ))
+_sym_db.RegisterMessage(UserTaskTakeReq)
+
+UserTaskTakeRsp = _reflection.GeneratedProtocolMessageType('UserTaskTakeRsp', (_message.Message,), dict(
+  DESCRIPTOR = _USERTASKTAKERSP,
+  __module__ = 'test_pb2'
+  # @@protoc_insertion_point(class_scope:py_test.UserTaskTakeRsp)
+  ))
+_sym_db.RegisterMessage(UserTaskTakeRsp)
 
 
 # @@protoc_insertion_point(module_scope)

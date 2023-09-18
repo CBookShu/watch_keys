@@ -19,4 +19,8 @@
 
 # 测试
     修改db和redis对应的ip,port,password等基础数据
-    运行 lasyncache.py 的测试用例
+    运行 pytest1.py 中的main函数
+
+# todo
+    1. redis和mysql的cache
+    2. msglist 分区问题
