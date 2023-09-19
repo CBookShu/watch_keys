@@ -49,6 +49,7 @@ class PlayerTest(threading.Thread):
 
     def run(self) -> None:
         # 注册
+        global keyprocess
         keyprocess.register_cmd("task_add_rsp", PlayerTest.TaskAddRsp())
         keyprocess.register_cmd("task_take_rsp", PlayerTest.TaskTakeRsp())
 
@@ -170,6 +171,7 @@ class TaskModule:
 def main(argv):
     # argv1: redis_url   redis.from_url 函数有说明示例
     # argv1: redis_url   redis.from_url 函数有说明示例
+    global keyprocess
     keyprocess = KeyProcess(sys.argv[1], None, sys.argv[2])
 
     test = PlayerTest()
